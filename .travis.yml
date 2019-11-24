@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - node
+
+# skip tests
+install: true
+
+script: wrangler build
+
+deploy:
+  - provider: script
+    script: bash deploy.sh
+    skip_cleanup: true
+    on:
+      branch: master
+
+before_install:
+    - "npm i @cloudflare/wrangler -g"
