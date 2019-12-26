@@ -5,7 +5,7 @@
 sed -e "s~ACCOUNT_ID~$ACCOUNT_ID~" \
     -e "s~ZONE_ID~$ZONE_ID~" \
     -e "s~ROUTE~$ROUTE~" \
-    -e "s~SLACK_COMMON~$SLACK_COMMON~" \
+    -e "s~SLACK_COMMON_KV_ID~$SLACK_COMMON_KV_ID~" \
     wrangler.toml > templated_wrangler.toml
 mv templated_wrangler.toml wrangler.toml
 CF_API_KEY=$CF_API_KEY CF_EMAIL=$CF_EMAIL wrangler publish

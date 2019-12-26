@@ -6,5 +6,5 @@ workers_dev = false
 
 route = "ROUTE"
 kv-namespaces = [
-    { binding = "SLACK_COMMON", id = "SLACK_COMMON"}
+    { binding = "SLACK_COMMON", id = "SLACK_COMMON_KV_ID"}
 ]
